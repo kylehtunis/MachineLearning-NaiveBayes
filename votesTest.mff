@@ -1,0 +1,39 @@
+@dataset house-votes-84
+
+@attribute handicapped-infants y n u
+@attribute water-project-cost-sharing y n u
+@attribute adoption-of-the-budget-resolution y n u
+@attribute physician-fee-freeze y n u
+@attribute el-salvador-aid y n u
+@attribute religious-groups-in-schools y n u
+@attribute anti-satellite-test-ban y n u
+@attribute aid-to-nicaraguan-contras y n u
+@attribute mx-missile y n u
+@attribute immigration y n u
+@attribute synfuels-corporation-cutback y n u
+@attribute education-spending y n u
+@attribute superfund-right-to-sue y n u
+@attribute crime y n u
+@attribute duty-free-exports y n u
+@attribute export-administration-act-south-africa y n u
+@attribute party democrat republican
+
+@examples
+
+n y n y y y n n n y u y y y n y 
+n y n y y y n n n n n y y y n u 
+u y y u y y n n n n y n y y n n 
+n y y n u y n n n n y n y n n y 
+y y y n y y n n n n y u y y y y 
+n y y n y y n n n n n n y y y y 
+n y n y y y n n n n n n u y y y 
+n y n y y y n n n n n n y y u y 
+n y n y y y n n n n n y y y n y 
+y y y n n n y y y n n n n n u u 
+n y n y y n n n n n u u y y n n 
+n y n y y y n n n n y u y y u u 
+n y y n n n y y y n n n y n u u 
+y y y n n y y y u y y u n n y u 
+n y n y y y n n n n n y u u n u 
+n y n y y y n n n y n y y u n u 
+y n y n n y n y u y y y u n n y 

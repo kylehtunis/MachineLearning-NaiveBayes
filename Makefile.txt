@@ -1,0 +1,38 @@
+SHARED = Attribute.cpp Attributes.cpp AttributeFactory.cpp Classifier.cpp DataSet.cpp Evaluator.cpp Example.cpp Examples.cpp Nominal.cpp Numeric.cpp Performance.cpp TrainTestSets.cpp NaiveBayes.cpp KNN.cpp
+KNN = MainKNN.cpp
+NB = MainNB.cpp
+SHAREDOBJS = $(SHARED:.cpp=.o)
+KNNOBJS = $(KNN:.cpp=.o)
+NBOBJS = $(NB:.cpp=.o)
+
+both: Makefile.dep $(SHAREDOBJS) $(NBOBJS) $(KNNOBJS)
+	g++ $(SHAREDOBJS) $(NBOBJS) -o NaiveBayes.exe
+	g++ $(SHAREDOBJS) $(KNNOBJS) -o kNN.exe
+
+knn: Makefile.dep $(SHAREDOBJS) $(KNNOBJS)
+	g++ $(SHAREDOBJS) $(KNNOBJS) -o kNN.exe
+
+nb: Makefile.dep $(SHAREDOBJS) $(NBOBJS)
+	g++ $(SHAREDOBJS) $(NBOBJS) -o NaiveBayes.exe
+
+$(SHAREDOBJS): $(SHARED)
+	g++ -c $(SHARED)
+
+$(KNNOBJS): $(KNN)
+	g++ -c $(KNN)
+
+$(NBOBJS): $(NB)
+	g++ -c $(NB)
+
+depend:
+	g++ -MM $(SHARED) $(KNN) $(NB)
+
+Makefile.dep:
+	touch Makefile.dep
+
+clean:
+	rm kNN.exe NaiveBayes.exe *.o Makefile.dep
+
+make: kNN.exe NaiveBayes.exe
+
+include Makefile.dep

@@ -1,0 +1,16 @@
+@dataset bikes
+
+@attribute make trek bridgestone cannondale nishiki garyfisher
+@attribute tires knobby treads
+@attribute bars straight curved
+@attribute bottles y n
+@attribute weight numeric
+@attribute type mountain hybrid
+
+@examples
+
+trek knobby straight y 250.3 mountain
+bridgestone treads straight y 200 hybrid
+cannondale knobby curved n 222.9 mountain
+nishiki treads curved y 190.3 hybrid
+trek treads straight y 196.8 hybrid
